@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///opt/homebrew/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Mon Mar  6 10:22:51 2023 as: nmap -oX scan.xml -sC -sV -p 1-255 10.1.10.1 -->
+<nmaprun scanner="nmap" args="nmap -oX scan.xml -sC -sV -p 1-255 10.1.10.1" start="1678126971" startstr="Mon Mar  6 10:22:51 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="255" services="1-255"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.1.10.1" addrtype="ipv4"/>
+<address addr="0C:7B:C8:A5:71:C2" addrtype="mac" vendor="Cisco Meraki"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1678126971" endtime="1678126984"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.1.10.1" addrtype="ipv4"/>
+<address addr="0C:7B:C8:A5:71:C2" addrtype="mac" vendor="Cisco Meraki"/>
+<hostnames>
+<hostname name="Docsis-Gateway.hsd1.wa.comcast.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="252">
+<extrareasons reason="no-response" count="252" proto="tcp" ports="1-79,82-178,180-255"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="lighttpd" version="1.4.55" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd:1.4.55</cpe></service><script id="http-server-header" output="lighttpd/1.4.55"><elem>lighttpd/1.4.55</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."><elem key="title"></elem>
+</script></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Cisco Meraki firewall httpd" devicetype="firewall" method="probed" conf="10"/><script id="http-title" output="404 Not Found"><elem key="title">404 Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="179"><state state="closed" reason="reset" reason_ttl="64"/><service name="bgp" method="table" conf="3"/></port>
+</ports>
+<times srtt="8768" rttvar="5516" to="100000"/>
+</host>
+<runstats><finished time="1678126984" timestr="Mon Mar  6 10:23:04 2023" summary="Nmap done at Mon Mar  6 10:23:04 2023; 1 IP address (1 host up) scanned in 13.65 seconds" elapsed="13.65" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
